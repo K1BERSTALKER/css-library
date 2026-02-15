@@ -1,0 +1,46 @@
+.neon-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.neon-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.neon-table th {
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.neon-table td {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.neon-table tr:last-child td {
+  border-bottom: none;
+}
+
+.neon-table-hover tr:hover td {
+  background: var(--bg-card-hover);
+}
+
+.neon-table-striped tr:nth-child(even) td {
+  background: var(--bg-secondary);
+}
+
+/* Compact */
+.neon-table-compact th,
+.neon-table-compact td {
+  padding: var(--space-sm) var(--space-md);
+}

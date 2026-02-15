@@ -1,0 +1,97 @@
+/* Pure CSS Dropdown */
+.neon-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.neon-dropdown-input {
+  display: none;
+}
+
+.neon-dropdown-trigger {
+  cursor: pointer;
+}
+
+.neon-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 200px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all var(--transition-fast);
+  padding: var(--space-xs);
+}
+
+.neon-dropdown-input:checked ~ .neon-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Focus-within approach */
+.neon-dropdown:focus-within .neon-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.neon-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.neon-dropdown-item:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.neon-dropdown-item.active {
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--accent-primary);
+}
+
+.neon-dropdown-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: var(--space-xs) 0;
+}
+
+.neon-dropdown-header {
+  padding: 6px 12px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Right aligned */
+.neon-dropdown-end .neon-dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+/* Up direction */
+.neon-dropdown-up .neon-dropdown-menu {
+  top: auto;
+  bottom: calc(100% + 4px);
+  transform: translateY(8px);
+}
+
+.neon-dropdown-up .neon-dropdown-input:checked ~ .neon-dropdown-menu {
+  transform: translateY(0);
+}

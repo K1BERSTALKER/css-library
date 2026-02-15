@@ -1,0 +1,119 @@
+.neon-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.neon-alert-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.neon-alert-content {
+  flex: 1;
+}
+
+.neon-alert-title {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.neon-alert-info {
+  background: var(--info-light);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: var(--info);
+}
+
+.neon-alert-success {
+  background: var(--success-light);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--success);
+}
+
+.neon-alert-warning {
+  background: var(--warning-light);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: var(--warning);
+}
+
+.neon-alert-danger {
+  background: var(--danger-light);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: var(--danger);
+}
+
+/* Dismissible - CSS only */
+.neon-alert-dismiss-input {
+  display: none;
+}
+
+.neon-alert-dismiss-input:checked + .neon-alert {
+  display: none;
+}
+
+.neon-alert-close {
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.neon-alert-close:hover {
+  opacity: 1;
+}
+
+/* Solid variant */
+.neon-alert-solid.neon-alert-info {
+  background: var(--info);
+  color: white;
+  border-color: var(--info);
+}
+.neon-alert-solid.neon-alert-success {
+  background: var(--success);
+  color: white;
+  border-color: var(--success);
+}
+.neon-alert-solid.neon-alert-warning {
+  background: var(--warning);
+  color: #1a1a1a;
+  border-color: var(--warning);
+}
+.neon-alert-solid.neon-alert-danger {
+  background: var(--danger);
+  color: white;
+  border-color: var(--danger);
+}
+
+/* Left border variant */
+.neon-alert-left-border {
+  border-left-width: 4px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--bg-card);
+}
+
+.neon-alert-left-border.neon-alert-info {
+  border-left-color: var(--info);
+  color: var(--text-secondary);
+}
+.neon-alert-left-border.neon-alert-success {
+  border-left-color: var(--success);
+  color: var(--text-secondary);
+}
+.neon-alert-left-border.neon-alert-warning {
+  border-left-color: var(--warning);
+  color: var(--text-secondary);
+}
+.neon-alert-left-border.neon-alert-danger {
+  border-left-color: var(--danger);
+  color: var(--text-secondary);
+}
+.neon-alert-left-border .neon-alert-title {
+  color: var(--text-primary);
+}

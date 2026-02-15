@@ -1,0 +1,99 @@
+.neon-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  cursor: pointer;
+}
+
+.neon-toggle-input {
+  display: none;
+}
+
+.neon-toggle-track {
+  width: 48px;
+  height: 26px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.neon-toggle-track::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  transition: all var(--transition-base);
+}
+
+.neon-toggle-input:checked + .neon-toggle-track {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.neon-toggle-input:checked + .neon-toggle-track::after {
+  transform: translateX(22px);
+  background: white;
+}
+
+.neon-toggle-label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+/* Sizes */
+.neon-toggle-sm .neon-toggle-track {
+  width: 36px;
+  height: 20px;
+}
+
+.neon-toggle-sm .neon-toggle-track::after {
+  width: 14px;
+  height: 14px;
+}
+
+.neon-toggle-sm .neon-toggle-input:checked + .neon-toggle-track::after {
+  transform: translateX(16px);
+}
+
+.neon-toggle-lg .neon-toggle-track {
+  width: 60px;
+  height: 32px;
+}
+
+.neon-toggle-lg .neon-toggle-track::after {
+  width: 26px;
+  height: 26px;
+}
+
+.neon-toggle-lg .neon-toggle-input:checked + .neon-toggle-track::after {
+  transform: translateX(28px);
+}
+
+/* Colors */
+.neon-toggle-success .neon-toggle-input:checked + .neon-toggle-track {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.neon-toggle-danger .neon-toggle-input:checked + .neon-toggle-track {
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+.neon-toggle-warning .neon-toggle-input:checked + .neon-toggle-track {
+  background: var(--warning);
+  border-color: var(--warning);
+}
+
+/* Disabled */
+.neon-toggle-input:disabled + .neon-toggle-track {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

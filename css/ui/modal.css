@@ -1,0 +1,131 @@
+/* Pure CSS Modal using :target */
+.neon-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  padding: var(--space-lg);
+}
+
+.neon-modal-overlay:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.neon-modal-overlay:target .neon-modal {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.neon-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+  transform: scale(0.9) translateY(20px);
+  opacity: 0;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-xl);
+}
+
+.neon-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.neon-modal-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.neon-modal-close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all var(--transition-fast);
+}
+
+.neon-modal-close:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.neon-modal-body {
+  padding: var(--space-xl);
+}
+
+.neon-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Modal Sizes */
+.neon-modal-sm {
+  max-width: 380px;
+}
+.neon-modal-lg {
+  max-width: 720px;
+}
+.neon-modal-xl {
+  max-width: 900px;
+}
+.neon-modal-fullscreen {
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
+  width: 100%;
+  height: 100%;
+}
+
+/* Checkbox-based modal (alternative approach) */
+.modal-trigger-input {
+  display: none;
+}
+
+.modal-trigger-input:checked ~ .neon-modal-overlay-cb {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-trigger-input:checked ~ .neon-modal-overlay-cb .neon-modal {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.neon-modal-overlay-cb {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  padding: var(--space-lg);
+}

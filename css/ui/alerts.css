@@ -1,0 +1,234 @@
+.neon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.neon-badge-primary {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+}
+
+.neon-badge-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+.neon-badge-success {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.neon-badge-danger {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.neon-badge-warning {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.neon-badge-info {
+  background: var(--info-light);
+  color: var(--info);
+}
+
+/* Solid variants */
+.neon-badge-solid.neon-badge-primary {
+  background: var(--accent-primary);
+  color: white;
+}
+.neon-badge-solid.neon-badge-success {
+  background: var(--success);
+  color: white;
+}
+.neon-badge-solid.neon-badge-danger {
+  background: var(--danger);
+  color: white;
+}
+.neon-badge-solid.neon-badge-warning {
+  background: var(--warning);
+  color: #1a1a1a;
+}
+.neon-badge-solid.neon-badge-info {
+  background: var(--info);
+  color: white;
+}
+
+/* Outline variants */
+.neon-badge-outline {
+  background: transparent;
+  border: 1px solid;
+}
+
+.neon-badge-outline.neon-badge-primary {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+.neon-badge-outline.neon-badge-success {
+  border-color: var(--success);
+  color: var(--success);
+}
+.neon-badge-outline.neon-badge-danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* Dot badge */
+.neon-badge-dot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Sizes */
+.neon-badge-sm {
+  padding: 1px 6px;
+  font-size: 10px;
+}
+.neon-badge-lg {
+  padding: 4px 14px;
+  font-size: var(--text-sm);
+}
+
+/* Pill number */
+.neon-badge-count {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--danger);
+  color: white;
+}
+.neon-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.neon-alert-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.neon-alert-content {
+  flex: 1;
+}
+
+.neon-alert-title {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.neon-alert-info {
+  background: var(--info-light);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: var(--info);
+}
+
+.neon-alert-success {
+  background: var(--success-light);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--success);
+}
+
+.neon-alert-warning {
+  background: var(--warning-light);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: var(--warning);
+}
+
+.neon-alert-danger {
+  background: var(--danger-light);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: var(--danger);
+}
+
+/* Dismissible - CSS only */
+.neon-alert-dismiss-input {
+  display: none;
+}
+
+.neon-alert-dismiss-input:checked + .neon-alert {
+  display: none;
+}
+
+.neon-alert-close {
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.neon-alert-close:hover {
+  opacity: 1;
+}
+
+/* Solid variant */
+.neon-alert-solid.neon-alert-info {
+  background: var(--info);
+  color: white;
+  border-color: var(--info);
+}
+.neon-alert-solid.neon-alert-success {
+  background: var(--success);
+  color: white;
+  border-color: var(--success);
+}
+.neon-alert-solid.neon-alert-warning {
+  background: var(--warning);
+  color: #1a1a1a;
+  border-color: var(--warning);
+}
+.neon-alert-solid.neon-alert-danger {
+  background: var(--danger);
+  color: white;
+  border-color: var(--danger);
+}
+
+/* Left border variant */
+.neon-alert-left-border {
+  border-left-width: 4px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--bg-card);
+}
+
+.neon-alert-left-border.neon-alert-info {
+  border-left-color: var(--info);
+  color: var(--text-secondary);
+}
+.neon-alert-left-border.neon-alert-success {
+  border-left-color: var(--success);
+  color: var(--text-secondary);
+}
+.neon-alert-left-border.neon-alert-warning {
+  border-left-color: var(--warning);
+  color: var(--text-secondary);
+}
+.neon-alert-left-border.neon-alert-danger {
+  border-left-color: var(--danger);
+  color: var(--text-secondary);
+}
+.neon-alert-left-border .neon-alert-title {
+  color: var(--text-primary);
+}

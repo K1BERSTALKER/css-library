@@ -1,52 +1,29 @@
-/* Import reset first */
-@import url("./base/reset.css");
+/* Base */
+@import "base/reset.css";
+@import "base/variables.css";
+@import "base/typography.css";
+@import "base/utilities.css";
 
-/* ---------- TOKENS ---------- */
+/* Layout */
+@import "layout.css";
 
-:root {
-  --bg: #ffffff;
-  --text: #111111;
-  --accent: #2563eb;
-}
-
-.dark {
-  --bg: #0f172a;
-  --text: #e5e7eb;
-}
-
-/* ---------- GLOBAL ---------- */
-
-body {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
-}
-
-/* Layout helpers */
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.site-header,
-.site-footer {
-  padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.03);
-}
-
-/* Buttons */
-
-button {
-  padding: 0.6rem 1rem;
-  border: none;
-  background: var(--accent);
-  color: white;
-  cursor: pointer;
-}
+/* UI Components */
+@import "ui/buttons.css";
+@import "ui/cards.css";
+@import "ui/modal.css";
+@import "ui/tabs.css";
+@import "ui/navigation.css";
+@import "ui/accordion.css";
+@import "ui/tooltip.css";
+@import "ui/toggle.css";
+@import "ui/forms.css";
+@import "ui/badges.css";
+@import "ui/alerts.css";
+@import "ui/progress.css";
+@import "ui/dropdown.css";
+@import "ui/breadcrumb.css";
+@import "ui/avatar.css";
+@import "ui/skeleton.css";
+@import "ui/table.css";
+@import "ui/timeline.css";
+@import "ui/slider.css";
