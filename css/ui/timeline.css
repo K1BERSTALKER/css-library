@@ -1,0 +1,63 @@
+.neon-timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.neon-timeline::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.neon-timeline-item {
+  position: relative;
+  padding-bottom: var(--space-xl);
+}
+
+.neon-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.neon-timeline-dot {
+  position: absolute;
+  left: -27px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: 3px solid var(--bg-primary);
+  z-index: 1;
+}
+
+.neon-timeline-dot-success {
+  background: var(--success);
+}
+.neon-timeline-dot-danger {
+  background: var(--danger);
+}
+.neon-timeline-dot-warning {
+  background: var(--warning);
+}
+
+.neon-timeline-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.neon-timeline-date {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.neon-timeline-content {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

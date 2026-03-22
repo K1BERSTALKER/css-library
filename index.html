@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚡ NeonUI - Pure CSS Component Library</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Sidebar Navigation -->
+    <input
+      type="checkbox"
+      id="sidebar-toggle"
+      class="sidebar-toggle-input"
+      checked
+    />
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="100" height="100" rx="20" fill="url(#logo-grad)" />
+              <path
+                d="M55 15L25 55H45L40 85L75 42H53L55 15Z"
+                fill="white"
+                stroke="white"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient id="logo-grad" x1="0" y1="0" x2="100" y2="100">
+                  <stop offset="0%" stop-color="#6366f1" />
+                  <stop offset="50%" stop-color="#a855f7" />
+                  <stop offset="100%" stop-color="#06b6d4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">NeonUI</span>
+            <span class="logo-version">v1.0.0</span>
+          </div>
+        </div>
+        <label for="sidebar-toggle" class="sidebar-close">✕</label>
+      </div>
+      <nav class="sidebar-nav" id="sidebar-nav">
+        <!-- Rendered by JS -->
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <label for="sidebar-toggle" class="menu-btn">
+          <span></span><span></span><span></span>
+        </label>
+        <div class="topbar-right">
+          <input type="checkbox" id="theme-toggle" class="theme-toggle-input" />
+          <label
+            for="theme-toggle"
+            class="theme-toggle-label"
+            title="Toggle theme"
+          >
+            <span class="theme-icon-light">☀️</span>
+            <span class="theme-icon-dark">🌙</span>
+          </label>
+          <a href="https://github.com" target="_blank" class="topbar-link"
+            >GitHub</a
+          >
+        </div>
+      </header>
+      <div class="content-area" id="content-area">
+        <!-- Pages load here -->
+      </div>
+    </main>
+
+    <script src="js/components.js"></script>
+    <script src="js/code-highlight.js"></script>
+    <script src="js/router.js"></script>
+  </body>
+</html>

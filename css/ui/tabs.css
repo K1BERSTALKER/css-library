@@ -1,0 +1,143 @@
+/* Pure CSS Tabs */
+.neon-tabs {
+  width: 100%;
+}
+
+.neon-tabs-input {
+  display: none;
+}
+
+.neon-tabs-nav {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  gap: var(--space-xs);
+  overflow-x: auto;
+}
+
+.neon-tabs-label {
+  padding: 12px 20px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  position: relative;
+}
+
+.neon-tabs-label:hover {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+.neon-tabs-panel {
+  display: none;
+  padding: var(--space-xl) 0;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Tab 1 */
+.neon-tabs-input:nth-of-type(1):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(1),
+.neon-tabs-input:nth-of-type(2):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(2),
+.neon-tabs-input:nth-of-type(3):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(3),
+.neon-tabs-input:nth-of-type(4):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(4),
+.neon-tabs-input:nth-of-type(5):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(5) {
+  color: var(--accent-primary);
+  border-bottom-color: var(--accent-primary);
+}
+
+.neon-tabs-input:nth-of-type(1):checked ~ .neon-tabs-panel:nth-of-type(1),
+.neon-tabs-input:nth-of-type(2):checked ~ .neon-tabs-panel:nth-of-type(2),
+.neon-tabs-input:nth-of-type(3):checked ~ .neon-tabs-panel:nth-of-type(3),
+.neon-tabs-input:nth-of-type(4):checked ~ .neon-tabs-panel:nth-of-type(4),
+.neon-tabs-input:nth-of-type(5):checked ~ .neon-tabs-panel:nth-of-type(5) {
+  display: block;
+}
+
+/* Pill Tabs Variant */
+.neon-tabs-pill .neon-tabs-nav {
+  border-bottom: none;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  padding: 4px;
+  gap: 4px;
+}
+
+.neon-tabs-pill .neon-tabs-label {
+  border-bottom: none;
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+}
+
+.neon-tabs-pill
+  .neon-tabs-input:nth-of-type(1):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(1),
+.neon-tabs-pill
+  .neon-tabs-input:nth-of-type(2):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(2),
+.neon-tabs-pill
+  .neon-tabs-input:nth-of-type(3):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(3),
+.neon-tabs-pill
+  .neon-tabs-input:nth-of-type(4):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(4),
+.neon-tabs-pill
+  .neon-tabs-input:nth-of-type(5):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(5) {
+  background: var(--accent-primary);
+  color: white;
+  border-bottom-color: transparent;
+}
+
+/* Boxed Tabs Variant */
+.neon-tabs-boxed .neon-tabs-nav {
+  border-bottom: none;
+  gap: var(--space-sm);
+}
+
+.neon-tabs-boxed .neon-tabs-label {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  border-bottom-width: 1px;
+}
+
+.neon-tabs-boxed
+  .neon-tabs-input:nth-of-type(1):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(1),
+.neon-tabs-boxed
+  .neon-tabs-input:nth-of-type(2):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(2),
+.neon-tabs-boxed
+  .neon-tabs-input:nth-of-type(3):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(3),
+.neon-tabs-boxed
+  .neon-tabs-input:nth-of-type(4):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(4),
+.neon-tabs-boxed
+  .neon-tabs-input:nth-of-type(5):checked
+  ~ .neon-tabs-nav
+  .neon-tabs-label:nth-of-type(5) {
+  border-color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--accent-primary);
+}

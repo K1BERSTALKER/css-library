@@ -1,0 +1,63 @@
+.neon-skeleton {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.neon-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.04),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.neon-skeleton-text {
+  height: 16px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.neon-skeleton-text:last-child {
+  width: 70%;
+  margin-bottom: 0;
+}
+
+.neon-skeleton-title {
+  height: 24px;
+  width: 50%;
+  margin-bottom: 16px;
+}
+
+.neon-skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.neon-skeleton-image {
+  height: 200px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.neon-skeleton-btn {
+  height: 40px;
+  width: 120px;
+  border-radius: var(--radius-md);
+}
+
+/* Skeleton card */
+.neon-skeleton-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
