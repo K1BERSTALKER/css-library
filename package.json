@@ -1,0 +1,55 @@
+{
+  "name": "@yourname/ui-lib",
+  "version": "1.0.0",
+  "description": "A modern, framework-agnostic CSS component library",
+  "type": "module",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/ui-lib.git"
+  },
+  "homepage": "https://ui-lib.vercel.app",
+  "bugs": "https://github.com/yourusername/ui-lib/issues",
+  "keywords": [
+    "css",
+    "ui",
+    "components",
+    "design-system",
+    "framework-agnostic"
+  ],
+  "main": "./dist/ui-lib.cjs.js",
+  "module": "./dist/ui-lib.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-lib.es.js",
+      "require": "./dist/ui-lib.cjs.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./css": "./dist/ui-lib.css",
+    "./tokens": "./dist/tokens.css",
+    "./components/button": "./dist/components/button.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build:lib": "vite build --config vite.config.lib.js",
+    "build:docs": "vite build --config vite.config.docs.js",
+    "preview:docs": "vite preview --outDir dist-docs",
+    "build": "npm run build:lib",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.32.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.1"
+  }
+}

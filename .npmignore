@@ -1,0 +1,10 @@
+src/app/
+index.html
+*.config.js
+tsconfig.json
+.github/
+node_modules/
+dist-docs/
+.env*
+*.log
+.DS_Store

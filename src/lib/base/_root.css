@@ -1,0 +1,49 @@
+/* ============================================
+   ROOT
+   Base element styles — consumes tokens only
+   ============================================ */
+
+html {
+  color-scheme: light;
+  accent-color: var(--color-brand);
+  caret-color: var(--color-brand);
+}
+
+[data-theme="dark"] html,
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--text-weight-body);
+  line-height: var(--text-leading-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Selection */
+::selection {
+  background-color: hsl(var(--brand-hue), var(--brand-sat), 50%, 0.2);
+  color: var(--color-text);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-disabled);
+}

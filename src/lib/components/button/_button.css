@@ -1,0 +1,91 @@
+/* ============================================
+   COMPONENT — Button
+   Base structure only
+   ============================================ */
+
+.btn {
+  position: relative;
+
+  /* --- Layout --- */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-gap-xs);
+
+  /* --- Sizing — default md --- */
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-xl);
+  min-width: fit-content;
+  white-space: nowrap;
+
+  /* --- Typography --- */
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--text-weight-ui);
+  line-height: var(--text-leading-ui);
+  letter-spacing: var(--tracking-wide);
+  text-decoration: none;
+
+  /* --- Shape --- */
+  border-radius: var(--radius-button);
+  border: 1px solid transparent;
+
+  /* --- Motion --- */
+  transform: var(--ui-transform-compose);
+  transition: var(--transition-button);
+  transform-origin: center;
+
+  /* --- Interaction --- */
+  cursor: pointer;
+  user-select: none;
+
+  /* --- Reset --- */
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* --- Icon inside button --- */
+.btn svg,
+.btn [data-icon] {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+/* --- Icon only --- */
+.btn-icon {
+  padding: var(--space-component-md);
+  aspect-ratio: 1;
+}
+
+/* --- Full width --- */
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* --- Button Group --- */
+.btn-group {
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+  border-radius: var(--radius-button) 0 0 var(--radius-button);
+}
+
+.btn-group .btn:last-child {
+  border-radius: 0 var(--radius-button) var(--radius-button) 0;
+}
+
+.btn-group .btn:not(:last-child) {
+  border-right-width: 0;
+}
+
+.btn-group .btn:focus-visible {
+  z-index: 1;
+}

@@ -1,0 +1,3 @@
+/* Font loading is intentionally owned by the host app.
+   This library only references font-family tokens so it
+   does not force third-party network requests or CSP changes. */

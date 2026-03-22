@@ -1,0 +1,51 @@
+[data-theme="dark"] {
+  /* --- Backgrounds --- */
+  --color-bg: var(--gray-950);
+  --color-bg-subtle: var(--gray-900);
+  --color-bg-elevated: var(--gray-800);
+
+  /* --- Surfaces --- */
+  --color-surface: var(--gray-900);
+  --color-surface-hover: var(--gray-800);
+  --color-surface-active: var(--gray-700);
+  --color-surface-disabled: var(--gray-900);
+
+  /* --- Borders --- */
+  --color-border: var(--gray-700);
+  --color-border-strong: var(--gray-600);
+  --color-border-focus: var(--brand-400);
+
+  /* --- Text --- */
+  --color-text: var(--gray-50);
+  --color-text-subtle: var(--gray-400);
+  --color-text-disabled: var(--gray-600);
+  --color-text-inverse: var(--gray-950);
+  --color-text-link: var(--brand-400);
+
+  /* --- Brand --- */
+  --color-brand: var(--brand-400);
+  --color-brand-hover: var(--brand-300);
+  --color-brand-active: var(--brand-200);
+  --color-brand-subtle: var(--brand-950);
+  --color-brand-text: var(--brand-300);
+
+  /* --- Status — Success --- */
+  --color-success: hsl(142, 71%, 45%);
+  --color-success-subtle: hsl(142, 71%, 8%);
+  --color-success-text: hsl(142, 71%, 70%);
+
+  /* --- Status — Error --- */
+  --color-error: hsl(0, 84%, 60%);
+  --color-error-subtle: hsl(0, 84%, 8%);
+  --color-error-text: hsl(0, 84%, 75%);
+
+  /* --- Status — Warning --- */
+  --color-warning: hsl(38, 92%, 55%);
+  --color-warning-subtle: hsl(38, 92%, 8%);
+  --color-warning-text: hsl(38, 92%, 75%);
+
+  /* --- Status — Info --- */
+  --color-info: hsl(217, 91%, 65%);
+  --color-info-subtle: hsl(217, 91%, 8%);
+  --color-info-text: hsl(217, 91%, 80%);
+}

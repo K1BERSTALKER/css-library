@@ -1,0 +1,27 @@
+/* ============================================
+   TOKENS — Radius
+   ============================================ */
+
+:root {
+  --radius-none: 0;
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Role tokens */
+  --radius-button: var(--radius-md);
+  --radius-input: var(--radius-sm);
+  --radius-card: var(--radius-xl);
+  --radius-modal: var(--radius-2xl);
+  --radius-badge: var(--radius-full);
+  --radius-avatar: var(--radius-full);
+  --radius-tag: var(--radius-full);
+  --radius-tooltip: var(--radius-sm);
+  --radius-dropdown: var(--radius-lg);
+  --radius-toast: var(--radius-lg);
+}

@@ -1,0 +1,105 @@
+/* ============================================
+   COMPONENT — Button Motions
+   Named motion presets — override --transition-button
+   Usage: add class alongside variant
+   e.g. <button class="btn btn-primary btn-motion-bounce">
+   ============================================ */
+
+/* --- Instant —
+   zero delay, snaps immediately
+   good for: toolbars, dense UIs, power users  */
+.btn-motion-instant {
+  --transition-button:
+    color 0ms var(--ease-linear), background-color 0ms var(--ease-linear),
+    border-color 0ms var(--ease-linear), box-shadow 0ms var(--ease-linear),
+    transform 0ms var(--ease-linear);
+}
+
+/* --- Snappy —
+   faster than default, still smooth
+   good for: dashboards, data-heavy apps       */
+.btn-motion-snappy {
+  --transition-button:
+    color 50ms var(--ease-in-out), background-color 80ms var(--ease-in-out),
+    border-color 80ms var(--ease-in-out), box-shadow 100ms var(--ease-out),
+    transform 80ms var(--ease-spring);
+}
+
+/* --- Default —
+   the system default, explicit version
+   good for: general purpose                   */
+.btn-motion-default {
+  --transition-button:
+    color var(--duration-fast) var(--ease-in-out),
+    background-color var(--duration-normal) var(--ease-in-out),
+    border-color var(--duration-normal) var(--ease-in-out),
+    box-shadow var(--duration-slow) var(--ease-out),
+    transform var(--duration-normal) var(--ease-spring);
+}
+
+/* --- Smooth —
+   slightly slower than default, very refined
+   good for: landing pages, marketing sites    */
+.btn-motion-smooth {
+  --transition-button:
+    color 100ms var(--ease-in-out), background-color 300ms var(--ease-in-out),
+    border-color 300ms var(--ease-in-out), box-shadow 400ms var(--ease-out),
+    transform 300ms var(--ease-spring);
+}
+
+/* --- Lazy —
+   slow and deliberate
+   good for: hero CTAs, onboarding, big moments */
+.btn-motion-lazy {
+  --transition-button:
+    color 200ms var(--ease-in-out), background-color 500ms var(--ease-in-out),
+    border-color 500ms var(--ease-in-out), box-shadow 600ms var(--ease-out),
+    transform 500ms var(--ease-spring);
+}
+
+/* --- Bounce —
+   strong spring overshoot
+   good for: playful UIs, children apps, games  */
+.btn-motion-bounce {
+  --transition-button:
+    color 100ms var(--ease-in-out), background-color 200ms var(--ease-in-out),
+    border-color 200ms var(--ease-in-out), box-shadow 300ms var(--ease-out),
+    transform 500ms var(--ease-bounce);
+}
+
+/* --- Elastic —
+   spring with longer settle time
+   good for: creative, editorial, portfolio     */
+.btn-motion-elastic {
+  --transition-button:
+    color 100ms var(--ease-in-out), background-color 300ms var(--ease-in-out),
+    border-color 300ms var(--ease-in-out), box-shadow 400ms var(--ease-out),
+    transform 700ms var(--ease-spring);
+}
+
+/* --- Pop —
+   instant color, springy transform
+   good for: notifications, alerts, CTAs        */
+.btn-motion-pop {
+  --transition-button:
+    color 50ms var(--ease-linear), background-color 50ms var(--ease-linear),
+    border-color 50ms var(--ease-linear), box-shadow 200ms var(--ease-out),
+    transform 300ms var(--ease-bounce);
+}
+
+/* --- Gentle —
+   ease-out only, no spring
+   good for: enterprise, serious, professional  */
+.btn-motion-gentle {
+  --transition-button:
+    color 100ms var(--ease-out), background-color 250ms var(--ease-out),
+    border-color 250ms var(--ease-out), box-shadow 350ms var(--ease-out),
+    transform 250ms var(--ease-out);
+}
+
+/* --- None —
+   no transition at all
+   good for: reduced motion preference, print   */
+.btn-motion-none {
+  --transition-button: none;
+}

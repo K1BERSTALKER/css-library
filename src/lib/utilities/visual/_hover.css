@@ -1,0 +1,195 @@
+/* ============================================
+   UTILITIES — Hover
+   All hover behavior in one file
+   Uses wrapper pattern to prevent glitch
+   ============================================ */
+
+/* ============================================
+   SETUP — Transition on child
+   ============================================ */
+
+[data-hover] {
+  transition:
+    transform var(--duration-normal) var(--ease-spring),
+    box-shadow var(--duration-slow) var(--ease-out),
+    opacity var(--duration-normal) var(--ease-in-out);
+}
+
+[data-hover="lift-sm"],
+[data-hover="lift"],
+[data-hover="lift-lg"],
+[data-hover="scale-sm"],
+[data-hover="scale"],
+[data-hover="scale-lg"],
+[data-hover="shrink"],
+[data-hover="shrink-sm"],
+[data-hover="lift-scale"],
+[data-hover="float"],
+[data-hover="float-sm"],
+[data-hover="float-lg"] {
+  transform: var(--ui-transform-compose);
+}
+
+/* ============================================
+   TRANSFORMS
+   data-hover-wrap on parent — never moves
+   data-hover on child       — receives transform
+   ============================================ */
+
+/* --- Lift --- */
+[data-hover-wrap]:hover > [data-hover="lift-sm"] {
+  --ui-hover-translate-y: var(--motion-lift-sm);
+}
+[data-hover-wrap]:hover > [data-hover="lift"] {
+  --ui-hover-translate-y: var(--motion-lift-md);
+}
+[data-hover-wrap]:hover > [data-hover="lift-lg"] {
+  --ui-hover-translate-y: var(--motion-lift-lg);
+}
+
+/* --- Scale --- */
+[data-hover-wrap]:hover > [data-hover="scale-sm"] {
+  --ui-hover-scale-x: var(--motion-grow-xs);
+  --ui-hover-scale-y: var(--motion-grow-xs);
+}
+[data-hover-wrap]:hover > [data-hover="scale"] {
+  --ui-hover-scale-x: var(--motion-grow-md);
+  --ui-hover-scale-y: var(--motion-grow-md);
+}
+[data-hover-wrap]:hover > [data-hover="scale-lg"] {
+  --ui-hover-scale-x: var(--motion-grow-lg);
+  --ui-hover-scale-y: var(--motion-grow-lg);
+}
+
+/* --- Shrink --- */
+[data-hover-wrap]:hover > [data-hover="shrink"] {
+  --ui-hover-scale-x: var(--motion-shrink-md);
+  --ui-hover-scale-y: var(--motion-shrink-md);
+}
+[data-hover-wrap]:hover > [data-hover="shrink-sm"] {
+  --ui-hover-scale-x: var(--motion-shrink-xs);
+  --ui-hover-scale-y: var(--motion-shrink-xs);
+}
+
+/* --- Lift + Scale combined --- */
+[data-hover-wrap]:hover > [data-hover="lift-scale"] {
+  --ui-hover-translate-y: var(--motion-lift-md);
+  --ui-hover-scale-x: var(--motion-grow-sm);
+  --ui-hover-scale-y: var(--motion-grow-sm);
+}
+
+/* ============================================
+   SHADOWS
+   Depth illusion without movement
+   Safe to use directly — no glitch risk
+   ============================================ */
+
+[data-hover="shadow-sm"]:hover {
+  box-shadow: var(--shadow-sm);
+}
+[data-hover="shadow"]:hover {
+  box-shadow: var(--shadow-md);
+}
+[data-hover="shadow-lg"]:hover {
+  box-shadow: var(--shadow-lg);
+}
+[data-hover="shadow-xl"]:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+/* ============================================
+   OPACITY
+   Fade effects — safe, no glitch
+   ============================================ */
+
+[data-hover="fade"]:hover {
+  opacity: 0.7;
+}
+[data-hover="fade-sm"]:hover {
+  opacity: 0.85;
+}
+[data-hover="fade-out"]:hover {
+  opacity: 0.5;
+}
+[data-hover="fade-in"]:hover {
+  opacity: 1;
+} /* for elements that start dimmed */
+
+/* ============================================
+   COMBINED — lift + shadow
+   Most realistic depth effect
+   ============================================ */
+
+[data-hover-wrap]:hover > [data-hover="float"] {
+  --ui-hover-translate-y: var(--motion-lift-md);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-hover-wrap]:hover > [data-hover="float-sm"] {
+  --ui-hover-translate-y: var(--motion-lift-sm);
+  box-shadow: var(--shadow-md);
+}
+
+[data-hover-wrap]:hover > [data-hover="float-lg"] {
+  --ui-hover-translate-y: var(--motion-lift-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ============================================
+   COLOR
+   Background + text color on hover
+   ============================================ */
+
+[data-hover="bg-subtle"]:hover {
+  background-color: var(--color-bg-subtle);
+}
+[data-hover="bg-surface"]:hover {
+  background-color: var(--color-surface-hover);
+}
+[data-hover="bg-brand"]:hover {
+  background-color: var(--color-brand-subtle);
+}
+[data-hover="text-brand"]:hover {
+  color: var(--color-brand);
+}
+[data-hover="text-subtle"]:hover {
+  color: var(--color-text-subtle);
+}
+
+/* ============================================
+   BORDER
+   ============================================ */
+
+[data-hover="border"]:hover {
+  border-color: var(--color-border-strong);
+}
+[data-hover="border-brand"]:hover {
+  border-color: var(--color-brand);
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  [data-hover] {
+    transition: none;
+  }
+
+  [data-hover-wrap]:hover > [data-hover="lift-sm"],
+  [data-hover-wrap]:hover > [data-hover="lift"],
+  [data-hover-wrap]:hover > [data-hover="lift-lg"],
+  [data-hover-wrap]:hover > [data-hover="scale-sm"],
+  [data-hover-wrap]:hover > [data-hover="scale"],
+  [data-hover-wrap]:hover > [data-hover="scale-lg"],
+  [data-hover-wrap]:hover > [data-hover="shrink"],
+  [data-hover-wrap]:hover > [data-hover="shrink-sm"],
+  [data-hover-wrap]:hover > [data-hover="lift-scale"],
+  [data-hover-wrap]:hover > [data-hover="float"],
+  [data-hover-wrap]:hover > [data-hover="float-sm"],
+  [data-hover-wrap]:hover > [data-hover="float-lg"] {
+    --ui-hover-translate-y: 0px;
+    --ui-hover-scale-x: 1;
+    --ui-hover-scale-y: 1;
+  }
+}

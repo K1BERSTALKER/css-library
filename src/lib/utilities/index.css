@@ -1,0 +1,14 @@
+/* ============================================
+   UTILITIES — index
+   ============================================ */
+@layer utilities.layout,
+       utilities.typography,
+       utilities.visual,
+       utilities.responsive,
+       utilities.accessibility;
+
+@import "./layout/index.css" layer(utilities.layout);
+@import "./typography/index.css" layer(utilities.typography);
+@import "./visual/index.css" layer(utilities.visual);
+@import "./responsive/index.css" layer(utilities.responsive);
+@import "./accessibility/index.css" layer(utilities.accessibility);

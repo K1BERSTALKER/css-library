@@ -1,0 +1,13 @@
+/* ============================================
+   TOKENS — Breakpoints
+   ============================================ */
+
+:root {
+  --screen-xs: 20rem; /* 320px  */
+  --screen-sm: 36rem; /* 576px  */
+  --screen-md: 48rem; /* 768px  */
+  --screen-lg: 64rem; /* 1024px */
+  --screen-xl: 80rem; /* 1280px */
+  --screen-2xl: 90rem; /* 1440px */
+  --screen-3xl: 120rem; /* 1920px */
+}

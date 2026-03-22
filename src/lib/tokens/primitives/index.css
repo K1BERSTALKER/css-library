@@ -1,0 +1,10 @@
+/* ============================================
+   PRIMITIVES — index
+   Raw values only, no dependencies
+   Order: colors first (others may depend on it)
+   ============================================ */
+
+@import "./_colors.css";
+@import "./_spacing.css";
+@import "./_typography.css";
+@import "./_breakpoints.css";

@@ -1,0 +1,42 @@
+/* ============================================
+   TOKENS — Shadows
+   ============================================ */
+
+:root {
+  --shadow-none: none;
+
+  --shadow-xs: 0 1px 2px 0 hsl(var(--brand-hue), 10%, 10%, 0.04);
+
+  --shadow-sm:
+    0 1px 3px 0 hsl(var(--brand-hue), 10%, 10%, 0.08),
+    0 1px 2px -1px hsl(var(--brand-hue), 10%, 10%, 0.04);
+
+  --shadow-md:
+    0 4px 6px -1px hsl(var(--brand-hue), 10%, 10%, 0.08),
+    0 2px 4px -2px hsl(var(--brand-hue), 10%, 10%, 0.04);
+
+  --shadow-lg:
+    0 10px 15px -3px hsl(var(--brand-hue), 10%, 10%, 0.08),
+    0 4px 6px -4px hsl(var(--brand-hue), 10%, 10%, 0.04);
+
+  --shadow-xl:
+    0 20px 25px -5px hsl(var(--brand-hue), 10%, 10%, 0.08),
+    0 8px 10px -6px hsl(var(--brand-hue), 10%, 10%, 0.04);
+
+  --shadow-2xl: 0 25px 50px -12px hsl(var(--brand-hue), 10%, 10%, 0.18);
+
+  --shadow-inset: inset 0 2px 4px 0 hsl(var(--brand-hue), 10%, 10%, 0.06);
+
+  /* Role tokens */
+  --shadow-card: var(--shadow-sm);
+  --shadow-card-hover: var(--shadow-md);
+  --shadow-dropdown: var(--shadow-lg);
+  --shadow-modal: var(--shadow-xl);
+  --shadow-toast: var(--shadow-lg);
+  --shadow-tooltip: var(--shadow-md);
+  --shadow-button: var(--shadow-xs);
+  --shadow-button-hover: var(--shadow-sm);
+  --shadow-input: var(--shadow-inset);
+  --shadow-input-focus: 0 0 0 3px
+    hsl(var(--brand-hue), var(--brand-sat), 50%, 0.2);
+}

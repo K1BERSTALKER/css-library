@@ -1,0 +1,43 @@
+/* ============================================
+   PRIMITIVES — Typography
+   Raw values only, no meaning attached
+   ============================================ */
+
+:root {
+  /* Families */
+  --font-sans:
+    "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:
+    "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+    monospace;
+
+  /* Weights */
+  --weight-300: 300;
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
+  --weight-800: 800;
+  --weight-900: 900;
+
+  --weight-light: var(--weight-300);
+  --weight-regular: var(--weight-400);
+  --weight-medium: var(--weight-500);
+  --weight-semibold: var(--weight-600);
+  --weight-bold: var(--weight-700);
+  --weight-extrabold: var(--weight-800);
+  --weight-black: var(--weight-900);
+
+  /* Line heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* Letter spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+}

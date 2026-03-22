@@ -1,0 +1,153 @@
+/* ============================================
+   COMPONENT — Button Variants
+   Color only — no transforms, no motion
+   ============================================ */
+
+/* --- Primary --- */
+.btn-primary {
+  --btn-spinner-color: var(--color-text-inverse);
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-button);
+}
+
+.btn-primary:hover:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-brand-hover);
+  border-color: var(--color-brand-hover);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.btn-primary:active:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-brand-active);
+  border-color: var(--color-brand-active);
+  box-shadow: var(--shadow-none);
+}
+
+/* --- Secondary --- */
+.btn-secondary {
+  --btn-spinner-color: var(--color-text);
+  background-color: var(--color-surface);
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+  box-shadow: var(--shadow-button);
+}
+
+.btn-secondary:hover:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.btn-secondary:active:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-surface-active);
+  box-shadow: var(--shadow-none);
+}
+
+/* --- Ghost --- */
+.btn-ghost {
+  --btn-spinner-color: var(--color-text);
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text);
+}
+
+.btn-ghost:hover:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-surface-hover);
+  border-color: transparent;
+}
+
+.btn-ghost:active:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-surface-active);
+}
+
+/* --- Outline --- */
+.btn-outline {
+  --btn-spinner-color: var(--color-brand-text);
+  background-color: transparent;
+  border-color: var(--color-brand);
+  color: var(--color-brand-text);
+}
+
+.btn-outline:hover:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-brand-subtle);
+  border-color: var(--color-brand-hover);
+  color: var(--color-brand-hover);
+}
+
+.btn-outline:active:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-brand-subtle);
+  border-color: var(--color-brand-active);
+  color: var(--color-brand-active);
+}
+
+/* --- Soft --- */
+.btn-soft {
+  --btn-spinner-color: var(--color-brand-text);
+  background-color: var(--color-brand-subtle);
+  border-color: transparent;
+  color: var(--color-brand-text);
+}
+
+.btn-soft:hover:not(:disabled):not([data-loading="true"]) {
+  background-color: hsl(var(--brand-hue), var(--brand-sat), 88%);
+  color: var(--color-brand-hover);
+}
+
+.btn-soft:active:not(:disabled):not([data-loading="true"]) {
+  background-color: hsl(var(--brand-hue), var(--brand-sat), 83%);
+  color: var(--color-brand-active);
+}
+
+/* --- Danger --- */
+.btn-danger {
+  --btn-spinner-color: hsl(0, 0%, 100%);
+  background-color: var(--color-error);
+  border-color: var(--color-error);
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-button);
+}
+
+.btn-danger:hover:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-error-text);
+  border-color: var(--color-error-text);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.btn-danger:active:not(:disabled):not([data-loading="true"]) {
+  box-shadow: var(--shadow-none);
+}
+
+/* --- Danger Ghost --- */
+.btn-danger-ghost {
+  --btn-spinner-color: var(--color-error);
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-error);
+}
+
+.btn-danger-ghost:hover:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-error-subtle);
+  border-color: transparent;
+}
+
+.btn-danger-ghost:active:not(:disabled):not([data-loading="true"]) {
+  background-color: var(--color-error-subtle);
+}
+
+/* --- Link --- */
+.btn-link {
+  --btn-spinner-color: var(--color-text-link);
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text-link);
+  padding-inline: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.btn-link:hover:not(:disabled):not([data-loading="true"]) {
+  color: var(--color-brand-hover);
+  text-decoration-thickness: 2px;
+}

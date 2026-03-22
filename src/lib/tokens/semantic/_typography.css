@@ -1,0 +1,82 @@
+/* ============================================
+   SEMANTIC — Typography
+   Fluid type scale + role tokens
+   Min: 320px (20rem) | Max: 1440px (90rem)
+   Range: 70rem
+   ============================================ */
+
+:root {
+  /* --- Fluid Type Scale --- */
+  --text-xs: clamp(
+    0.64rem,
+    calc(0.64rem + 0.11 * ((100vw - 20rem) / 70)),
+    0.75rem
+  );
+  --text-sm: clamp(
+    0.75rem,
+    calc(0.75rem + 0.125 * ((100vw - 20rem) / 70)),
+    0.875rem
+  );
+  --text-base: clamp(
+    1rem,
+    calc(1rem + 0.125 * ((100vw - 20rem) / 70)),
+    1.125rem
+  );
+  --text-lg: clamp(
+    1.125rem,
+    calc(1.125rem + 0.25 * ((100vw - 20rem) / 70)),
+    1.375rem
+  );
+  --text-xl: clamp(
+    1.25rem,
+    calc(1.25rem + 0.25 * ((100vw - 20rem) / 70)),
+    1.5rem
+  );
+  --text-2xl: clamp(1.5rem, calc(1.5rem + 0.5 * ((100vw - 20rem) / 70)), 2rem);
+  --text-3xl: clamp(
+    1.875rem,
+    calc(1.875rem + 0.625 * ((100vw - 20rem) / 70)),
+    2.5rem
+  );
+  --text-4xl: clamp(
+    2.25rem,
+    calc(2.25rem + 0.75 * ((100vw - 20rem) / 70)),
+    3rem
+  );
+  --text-5xl: clamp(3rem, calc(3rem + 1 * ((100vw - 20rem) / 70)), 4rem);
+  --text-6xl: clamp(
+    3.75rem,
+    calc(3.75rem + 1.25 * ((100vw - 20rem) / 70)),
+    5rem
+  );
+  --text-7xl: clamp(4.5rem, calc(4.5rem + 2 * ((100vw - 20rem) / 70)), 6.5rem);
+  --text-8xl: clamp(6rem, calc(6rem + 2 * ((100vw - 20rem) / 70)), 8rem);
+  --text-9xl: clamp(8rem, calc(8rem + 2 * ((100vw - 20rem) / 70)), 10rem);
+
+  /* --- Font Role Tokens --- */
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --font-code: var(--font-mono);
+
+  /* --- Weight Role Tokens --- */
+  --text-weight-body: var(
+    --weight-regular
+  ); /* 400 — paragraphs, default text */
+  --text-weight-heading: var(--weight-bold); /* 700 — h1, h2, h3 */
+  --text-weight-subheading: var(--weight-semibold); /* 600 — h4, h5, h6 */
+  --text-weight-label: var(--weight-medium); /* 500 — labels, badges, tabs */
+  --text-weight-caption: var(--weight-light); /* 300 — captions, footnotes */
+  --text-weight-strong: var(--weight-extrabold); /* 800 — emphasized headings */
+  --text-weight-display: var(
+    --weight-black
+  ); /* 900 — hero, marketing, poster */
+  --text-weight-code: var(--weight-regular); /* 400 — inline code */
+  --text-weight-ui: var(--weight-medium); /* 500 — buttons, nav, chips */
+
+  /* --- Leading Role Tokens --- */
+  --text-leading-body: var(--leading-normal);
+  --text-leading-heading: var(--leading-tight);
+  --text-leading-normal: var(--leading-normal);
+  --text-leading-relaxed: var(--leading-relaxed);
+  --text-leading-ui: var(--leading-none);
+}

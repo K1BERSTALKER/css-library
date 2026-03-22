@@ -1,0 +1,56 @@
+/* ============================================
+   SEMANTIC — Colors
+   Light theme default
+   ============================================ */
+
+:root {
+  /* --- Backgrounds --- */
+  --color-bg: var(--gray-50);
+  --color-bg-subtle: var(--gray-100);
+  --color-bg-elevated: hsl(0, 0%, 100%);
+
+  /* --- Surfaces --- */
+  --color-surface: hsl(0, 0%, 100%);
+  --color-surface-hover: var(--gray-100);
+  --color-surface-active: var(--gray-200);
+  --color-surface-disabled: var(--gray-100);
+
+  /* --- Borders --- */
+  --color-border: var(--gray-200);
+  --color-border-strong: var(--gray-300);
+  --color-border-focus: var(--brand-500);
+
+  /* --- Text --- */
+  --color-text: var(--gray-900);
+  --color-text-subtle: var(--gray-500);
+  --color-text-disabled: var(--gray-300);
+  --color-text-inverse: hsl(0, 0%, 100%);
+  --color-text-link: var(--brand-600);
+
+  /* --- Brand --- */
+  --color-brand: var(--brand-500);
+  --color-brand-hover: var(--brand-600);
+  --color-brand-active: var(--brand-700);
+  --color-brand-subtle: var(--brand-50);
+  --color-brand-text: var(--brand-700);
+
+  /* --- Status — Success --- */
+  --color-success: hsl(142, 71%, 45%);
+  --color-success-subtle: hsl(142, 71%, 97%);
+  --color-success-text: hsl(142, 71%, 25%);
+
+  /* --- Status — Error --- */
+  --color-error: hsl(0, 84%, 55%);
+  --color-error-subtle: hsl(0, 84%, 97%);
+  --color-error-text: hsl(0, 84%, 30%);
+
+  /* --- Status — Warning --- */
+  --color-warning: hsl(38, 92%, 50%);
+  --color-warning-subtle: hsl(38, 92%, 97%);
+  --color-warning-text: hsl(38, 92%, 25%);
+
+  /* --- Status — Info --- */
+  --color-info: hsl(217, 91%, 55%);
+  --color-info-subtle: hsl(217, 91%, 97%);
+  --color-info-text: hsl(217, 91%, 30%);
+}

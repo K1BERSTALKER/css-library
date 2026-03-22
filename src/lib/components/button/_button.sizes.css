@@ -1,0 +1,57 @@
+/* ============================================
+   COMPONENT — Button Sizes
+   Padding, font-size, radius only
+   ============================================ */
+
+/* --- XS --- */
+.btn-xs {
+  padding-block: var(--space-component-xs);
+  padding-inline: var(--space-component-sm);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-sm);
+  gap: var(--space-gap-xs);
+}
+
+.btn-xs.btn-icon {
+  padding: var(--space-component-xs);
+}
+
+/* --- SM --- */
+.btn-sm {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-md);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-sm);
+}
+
+.btn-sm.btn-icon {
+  padding: var(--space-component-sm);
+}
+
+/* --- MD — default, defined in _button.css --- */
+
+/* --- LG --- */
+.btn-lg {
+  padding-block: var(--space-component-lg);
+  padding-inline: var(--space-8);
+  font-size: var(--text-base);
+  border-radius: var(--radius-lg);
+  gap: var(--space-gap-sm);
+}
+
+.btn-lg.btn-icon {
+  padding: var(--space-component-lg);
+}
+
+/* --- XL --- */
+.btn-xl {
+  padding-block: var(--space-component-xl);
+  padding-inline: var(--space-10);
+  font-size: var(--text-lg);
+  border-radius: var(--radius-xl);
+  gap: var(--space-gap-sm);
+}
+
+.btn-xl.btn-icon {
+  padding: var(--space-component-xl);
+}

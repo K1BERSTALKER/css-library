@@ -1,0 +1,190 @@
+/* ============================================
+   UTILITIES — Intrinsic Layout
+   Responsive without media queries
+   ============================================ */
+
+/* --- Auto Grid ---
+   Columns form and break automatically        */
+
+/* Minimum column width: 160px */
+.grid-auto-xs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+  gap: var(--space-gap-md);
+}
+
+/* Minimum column width: 200px */
+.grid-auto-sm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-gap-md);
+}
+
+/* Minimum column width: 280px */
+.grid-auto-md {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-gap-md);
+}
+
+/* Minimum column width: 320px */
+.grid-auto-lg {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-gap-lg);
+}
+
+/* Minimum column width: 400px */
+.grid-auto-xl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  gap: var(--space-gap-lg);
+}
+
+/* --- Auto Fill (keeps empty columns) --- */
+.grid-fill-sm {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-gap-md);
+}
+
+.grid-fill-md {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-gap-md);
+}
+
+/* --- Flex Wrap — self-wrapping rows --- */
+.flex-fluid-xs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-sm);
+}
+.flex-fluid-xs > * {
+  flex: 1 1 min(160px, 100%);
+}
+
+.flex-fluid-sm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-md);
+}
+.flex-fluid-sm > * {
+  flex: 1 1 min(200px, 100%);
+}
+
+.flex-fluid-md {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-md);
+}
+.flex-fluid-md > * {
+  flex: 1 1 min(280px, 100%);
+}
+
+.flex-fluid-lg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-lg);
+}
+.flex-fluid-lg > * {
+  flex: 1 1 min(320px, 100%);
+}
+
+/* --- Fluid Padding --- */
+.pad-fluid-sm {
+  padding: clamp(var(--space-4), 3vw, var(--space-8));
+}
+.pad-fluid-md {
+  padding: clamp(var(--space-6), 5vw, var(--space-12));
+}
+.pad-fluid-lg {
+  padding: clamp(var(--space-8), 7vw, var(--space-20));
+}
+.pad-fluid-xl {
+  padding: clamp(var(--space-12), 9vw, var(--space-32));
+}
+
+.padx-fluid-sm {
+  padding-inline: clamp(var(--space-4), 4vw, var(--space-8));
+}
+.padx-fluid-md {
+  padding-inline: clamp(var(--space-6), 6vw, var(--space-16));
+}
+.padx-fluid-lg {
+  padding-inline: clamp(var(--space-8), 8vw, var(--space-24));
+}
+
+/* --- Stack — vertical rhythm, fluid gap --- */
+.stack-sm > * + * {
+  margin-top: clamp(var(--space-2), 2vw, var(--space-4));
+}
+.stack-md > * + * {
+  margin-top: clamp(var(--space-4), 3vw, var(--space-8));
+}
+.stack-lg > * + * {
+  margin-top: clamp(var(--space-6), 5vw, var(--space-12));
+}
+
+/* --- Sidebar layout ---
+   Sidebar stays fixed, content fills rest
+   Wraps automatically when content < 50%     */
+.layout-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-lg);
+}
+
+.layout-sidebar > :first-child {
+  flex-basis: 280px;
+  flex-grow: 1;
+}
+
+.layout-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: min(50%, 480px); /* wraps when main < 480px */
+}
+
+/* --- Switcher —
+   Stacks vertically below threshold,
+   horizontal above — no media query        */
+.layout-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-md);
+}
+
+.layout-switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((30rem - 100%) * 999); /* threshold: 30rem */
+}
+
+/* --- Center container — fluid max-width --- */
+.container {
+  width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: clamp(var(--space-4), 5vw, var(--space-16));
+}
+
+.container-sm {
+  max-width: 48rem;
+  margin-inline: auto;
+  padding-inline: clamp(var(--space-4), 5vw, var(--space-12));
+}
+.container-md {
+  max-width: 64rem;
+  margin-inline: auto;
+  padding-inline: clamp(var(--space-4), 5vw, var(--space-12));
+}
+.container-lg {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: clamp(var(--space-4), 5vw, var(--space-16));
+}
+.container-xl {
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: clamp(var(--space-4), 5vw, var(--space-16));
+}

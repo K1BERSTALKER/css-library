@@ -1,0 +1,46 @@
+/* ============================================
+   SEMANTIC — Spacing
+   Named roles mapped to primitives
+   ============================================ */
+
+:root {
+  /* --- Component Internal Spacing ---
+     padding inside buttons, inputs, cards      */
+  --space-component-xs: var(--space-1); /*  4px — tight chips, badges */
+  --space-component-sm: var(--space-2); /*  8px — small buttons */
+  --space-component-md: var(--space-3); /* 12px — default buttons, inputs */
+  --space-component-lg: var(--space-4); /* 16px — large buttons */
+  --space-component-xl: var(--space-6); /* 24px — cards, panels */
+
+  /* --- Gap — space between elements ---
+     flex gap, grid gap                         */
+  --space-gap-xs: var(--space-1); /*  4px — icon + label */
+  --space-gap-sm: var(--space-2); /*  8px — tight list items */
+  --space-gap-md: var(--space-4); /* 16px — default grid gap */
+  --space-gap-lg: var(--space-6); /* 24px — card grid */
+  --space-gap-xl: var(--space-8); /* 32px — section columns */
+
+  /* --- Layout — page level spacing ---
+     section padding, container margins         */
+  --space-layout-xs: var(--space-4); /* 16px — mobile gutters */
+  --space-layout-sm: var(--space-6); /* 24px — small section padding */
+  --space-layout-md: var(--space-12); /* 48px — default section padding */
+  --space-layout-lg: var(--space-20); /* 80px — large section padding */
+  --space-layout-xl: var(--space-32); /* 128px — hero padding */
+
+  /* --- Stack — vertical rhythm ---
+     margin between text blocks, headings       */
+  --space-stack-xs: var(--space-1); /*  4px — label to input */
+  --space-stack-sm: var(--space-2); /*  8px — caption to content */
+  --space-stack-md: var(--space-4); /* 16px — paragraph spacing */
+  --space-stack-lg: var(--space-8); /* 32px — heading to body */
+  --space-stack-xl: var(--space-12); /* 48px — section to section */
+
+  /* --- Inline — horizontal rhythm ---
+     space between inline elements              */
+  --space-inline-xs: var(--space-1); /*  4px */
+  --space-inline-sm: var(--space-2); /*  8px */
+  --space-inline-md: var(--space-4); /* 16px */
+  --space-inline-lg: var(--space-6); /* 24px */
+  --space-inline-xl: var(--space-8); /* 32px */
+}

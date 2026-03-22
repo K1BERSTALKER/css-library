@@ -1,0 +1,121 @@
+/* ============================================
+   COMPONENT — Button States
+   Motion only — transform, focus, disabled, loading
+   ============================================ */
+
+/* ============================================
+   HOVER
+   Shadow creates depth illusion — no glitch
+   Small translateY stays within cursor zone
+   ============================================ */
+
+.btn:hover:not(:disabled):not([data-loading="true"]) {
+  --btn-translate-y: var(--motion-lift-xs);
+}
+
+/* ============================================
+   ACTIVE / PRESS
+   ============================================ */
+
+.btn:active:not(:disabled):not([data-loading="true"]) {
+  --btn-translate-y: 0px;
+  --btn-scale-x: var(--motion-shrink-sm);
+  --btn-scale-y: var(--motion-shrink-sm);
+  transition:
+    var(--transition-button),
+    transform var(--duration-instant) var(--ease-in);
+}
+
+/* ============================================
+   FOCUS
+   ============================================ */
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  transition:
+    var(--transition-button),
+    outline-offset var(--duration-fast) var(--ease-out);
+}
+
+/* ============================================
+   DISABLED
+   ============================================ */
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  --btn-translate-y: 0px;
+  --btn-scale-x: 1;
+  --btn-scale-y: 1;
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ============================================
+   LOADING
+   ============================================ */
+
+.btn[data-loading="true"] {
+  --btn-translate-y: 0px;
+  --btn-scale-x: 1;
+  --btn-scale-y: 1;
+  cursor: wait;
+  pointer-events: none;
+  position: relative;
+  color: transparent;
+}
+
+.btn[data-loading="true"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  border: 2px solid var(--btn-spinner-color, currentColor);
+  border-top-color: transparent;
+  border-radius: var(--radius-full);
+  animation: btn-spin var(--duration-slower) linear infinite;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   ICON MICRO-MOTION
+   ============================================ */
+
+.btn svg,
+.btn [data-icon] {
+  transition: transform var(--duration-fast) var(--ease-spring);
+}
+
+/* Trailing icon slides right */
+.btn:hover:not(:disabled):not([data-loading="true"]) svg:last-child,
+.btn:hover:not(:disabled):not([data-loading="true"]) [data-icon]:last-child {
+  transform: translateX(var(--motion-nudge-sm));
+}
+
+/* Leading icon nudges left */
+.btn:hover:not(:disabled):not([data-loading="true"])
+  svg:first-child:not(:last-child),
+.btn:hover:not(:disabled):not([data-loading="true"])
+  [data-icon]:first-child:not(:last-child) {
+  transform: translateX(calc(var(--motion-nudge-xs) * -1));
+}
+
+/* ============================================
+   BUTTON GROUP — no motion
+   ============================================ */
+
+.btn-group .btn,
+.btn-group .btn:hover,
+.btn-group .btn:active {
+  --btn-translate-y: 0px;
+  --btn-scale-x: 1;
+  --btn-scale-y: 1;
+}

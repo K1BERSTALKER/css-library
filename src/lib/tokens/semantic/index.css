@@ -1,0 +1,13 @@
+/* ============================================
+   SEMANTIC — index
+   Maps primitives → meaningful roles
+   Must load AFTER primitives/index.css
+   ============================================ */
+
+@import "./_colors.css";
+@import "./_spacing.css";
+@import "./_typography.css";
+@import "./_motion.css";
+@import "./_radius.css";
+@import "./_shadows.css";
+@import "./_zindex.css";
